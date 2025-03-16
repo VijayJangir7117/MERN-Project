@@ -9,7 +9,7 @@ function Read() {
  
 
   async function  getData(){
-  const response=await fetch("http://localhost:5000");
+  const response=await fetch("https://your-backend.vercel.app");
 
   const result=await response.json();
   if(!response.ok){
@@ -23,7 +23,7 @@ function Read() {
  }
   
  const handleDelete=async (id)=>{
-  const response=await fetch(`http://localhost:5000/${id}`,{method:"DELETE"})
+  const response=await fetch(`https://your-backend.vercel.app/${id}`,{method:"DELETE"})
   
   const result= await response.json();
   if(!response.ok){

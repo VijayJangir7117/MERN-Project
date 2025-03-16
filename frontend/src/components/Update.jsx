@@ -13,7 +13,7 @@ const{id}=useParams();
 
 //getting single user data
 const getSingleUser=async ()=>{
-  const response=await fetch(`http://localhost:5000/${id}`);
+  const response=await fetch(`https://your-backend.vercel.app/${id}`);
 
   const result=await response.json();
 
@@ -36,7 +36,7 @@ const getSingleUser=async ()=>{
   e.preventDefault();
   const updatedUser={name,email,age}
   
-  const response =await fetch(`http://localhost:5000/${id}`,
+  const response =await fetch(`https://your-backend.vercel.app/${id}`,
     {
        method:"PATCH",
        body:JSON.stringify(updatedUser),

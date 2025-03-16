@@ -17,7 +17,7 @@ const handleSubmit=async (e)=>{
 e.preventDefault();
 const adduser={name,email,age}
 
-const response =await fetch("http://localhost:5000",
+const response =await fetch("https://your-backend.vercel.app",
   {
      method:"POST",
      body:JSON.stringify(adduser),
